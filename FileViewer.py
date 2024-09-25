@@ -133,6 +133,8 @@ def process_directory(directory):
     # Convert embeddings to numpy array
     embedding_array = np.array(embeddings_list)
 
+    print(locals())
+
     # Reduce embeddings to 3D using UMAP
     reducer = umap.UMAP(n_components=3, random_state=42)
     embedding_3d = reducer.fit_transform(embedding_array)
